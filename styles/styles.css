@@ -1,0 +1,310 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --emerald-900-color: #064e3b;
+    --emerald-400-color: #34d399;
+    --emerald-200-color: #a7f3d0;
+    --emerald-100-color: #d1fae5;
+    --gray-700-color: #374151;
+}
+@font-face {
+    font-family: roboto-condensed-font;
+    src: url(../fonts/Roboto-Condensed.ttf);
+}
+@font-face {
+    font-family: roboto-light-font;
+    src: url(../fonts/Roboto-Light.ttf);
+}
+/*Style for the dashboard division*/
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 20vw auto;
+    height: 100vh;
+}
+/*Styles for the left column*/
+    .left-dashboard {
+        background-color: var(--emerald-400-color);
+        color: #fff;
+        height: 100%;
+    }
+        .dashboard-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2vh;
+        }
+            .dashboard-container img {
+                width: 5vw;
+                height: auto;
+            }
+            .dashboard-container h1 {
+                font-size: 2rem;
+                letter-spacing: 2px;
+                font-weight: bold;
+                font-family: roboto-condensed-font, sans-serif;
+                padding-left: 1vw;
+            }
+        .items-container {
+            display: flex;
+            flex-direction: column;
+        }
+            .item {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-left: 4vw;
+                margin-top: 2vh;
+            }
+                .item img {
+                    width: 3vw;
+                    height: auto;
+                }
+                .item a {
+                    font-size: 1.5rem;
+                    letter-spacing: 1px;
+                    font-weight: bold;
+                    font-family: roboto-condensed-font, sans-serif;
+                    margin-left: 2vw;
+                    text-decoration: none;
+                    color: #fff;
+                    cursor: pointer;
+                }
+                .item a:hover {
+                    color: var(--emerald-900-color);
+                }
+            .settings {
+                margin-top: 15vh;
+            }
+/*Styles for the right column*/
+    .right-dashboard {
+        display: grid;
+        grid-template-rows: auto auto;
+    }
+/*Style for the top*/
+        .dashboard-nav {
+            display: flex;
+            flex-direction: column;
+        }
+            .top-side-nav {
+                display: flex;
+                align-items: center;
+            }
+                .search-icon {
+                    width: 2vw;
+                    height: auto;
+                    margin-top: 4vh;
+                    margin-left: 2vw;
+                }
+                .search-input {
+                    width: 40vw;
+                    height: 5vh;
+                    border-radius: 2vh;
+                    background-color: var(--emerald-100-color);
+                    border: 1px solid var(--emerald-100-color);
+                    font-family: roboto-light-font, sans-serif;
+                    font-size: 1.3rem;
+                    margin-top: 4vh;
+                    margin-left: 2vw;
+                }
+                .ring-icon {
+                    width: 2vw;
+                    height: auto;
+                    margin-top: 4vh;
+                    margin-left: 15vw;
+                }
+                .welcome-img {
+                    width: 4vw;
+                    height: auto;
+                    margin-top: 4vh;
+                    margin-left: 3vw;
+                }
+                .top-side-nav p {
+                    font-size: 1.8rem;
+                    letter-spacing: 1px;
+                    font-weight: 800;
+                    font-family: roboto-condensed-font, sans-serif;
+                    margin-top: 4vh;
+                    margin-left: 1vw;
+                }
+            .bottom-side-nav {
+                display: flex;
+                align-items: center;
+                margin: 4vh 0 2vh 2vw;
+            }
+                .profile-img {
+                    width: 7vw;
+                    height: auto;
+                }
+                .user-txt {
+                    margin-left: 2vw;
+                }
+                    .user-txt > :nth-child(1){
+                        font-size: 1.5rem;
+                        font-family: roboto-light-font, sans-serif;
+                        
+                    }
+                    .user-txt > :nth-child(2){
+                        font-size: 1.8rem;
+                        font-weight: 800;
+                        letter-spacing: 1px;
+                        font-family: roboto-condensed-font, sans-serif;
+                    }
+                .btn-navbar {
+                    display: flex;
+                    margin-left: 30vw;
+                }
+                    .btn-navbar button {
+                        border-radius: 3vh;
+                        border-style: none;
+                        background-color: var(--emerald-200-color);
+                        font-family: roboto-condensed-font, sans-serif;
+                        font-size: 1.2rem;
+                        font-weight: 800;
+                        cursor: pointer;
+                        padding: 2vh 3vw;
+                        margin: 0 1vw;
+                        transition: background-color 0.3s ease, color 0.3s ease;
+                    }
+                    .btn-navbar button:hover {
+                        background-color: var(--emerald-400-color);
+                    }
+/* Style for the main of dashboard */
+    .dashboard-content {
+        background-color: var(--emerald-200-color);
+        display: grid;
+        grid-template-columns: 70% auto;
+    }
+        .cards-container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+            .title-container {
+                margin: 2vh 0 0 2vw;
+            }
+                .title-container p {
+                    font-size: 1.8rem;
+                    font-family: roboto-condensed-font, sans-serif;
+                    font-weight: 900;
+                    letter-spacing: 2px;
+                }
+            .card {
+                display: flex;
+                flex-direction: column;
+                background-color: #fff;
+                border-left: 0.5vw solid var(--emerald-900-color);
+                border-radius: 4vh;
+                width: 90%;
+                margin: 5vh 2vw 1vh 1vw;
+            }
+                .card p {
+                    font-size: 1.4rem;
+                    font-weight: 800;
+                    padding: 3vh 0 3vh 2vw;
+                    font-family: roboto-light-font, sans-serif;
+                }
+                .card span {
+                    font-size: 1.1rem;
+                    padding: 1vh 0 1vh 2vw;
+                    color: var(--gray-700-color);
+                    font-family: roboto-light-font;
+                }
+                .card-icon {
+                    align-self: flex-end;
+                    display: flex;
+                    gap: 1vw;
+                    margin: 1vh 1vw 2vh 0;
+                }
+                    .card-icon img {
+                        width: 2vw;
+                        height: auto;
+                    }
+    .ann-trend-content {
+        display: grid;
+        grid-template-rows: auto auto;
+    }
+        .top-ann {
+            display: flex;
+            flex-direction: column;
+        }
+            .ann-title {
+                font-size: 1.8rem;
+                font-family: roboto-condensed-font, sans-serif;
+                font-weight: 900;
+                letter-spacing: 2px;
+                margin: 2vh 0 0 0;
+            }
+            .card-container {
+                background-color: #fff;
+                border-radius: 5vh;
+                width: 95%;
+                margin: 5vh 0 1vh 0;
+            }
+                .top-ann-card {
+                    padding: 2vh 2vw;
+                    
+                }
+                    .top-ann-card p {
+                        font-size: 1.2rem;
+                        font-weight:800;
+                        font-family: roboto-condensed-font, sans-serif;
+                        letter-spacing: 1px;
+                        margin-bottom: 2vh; 
+                    }
+                    .top-ann-card span {
+                        font-size: 1rem;
+                        display: flex;
+                        justify-content: left;
+                        font-family: roboto-light-font, sans-serif;
+                        color: var(--gray-700-color);
+                    }
+                .divider {
+                        border-bottom: 1px solid var(--gray-700-color);
+                        margin: 1vh 2vw;
+                }
+        .bottom-trend {
+            display: flex;
+            flex-direction: column;
+        }
+            .trend-title {
+                font-size: 1.8rem;
+                font-family: roboto-condensed-font, sans-serif;
+                font-weight: 900;
+                letter-spacing: 2px;
+                margin: 5vh 0 0 0;
+            }
+            .trend-container {
+                background-color: #fff;
+                border-radius: 5vh;
+                width: 95%;
+                margin: 3vh 0 1vh 0;
+            } 
+                .bottom-trend-card {
+                    display: flex;
+                    align-items: center;
+                    padding: 2vh 1vw;
+                }
+                    .bottom-trend-card img {
+                        width: 3vw;
+                        height: auto;
+                    }
+                    .trend-user {
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: 2vw;
+                    }
+                    .trend-user p {
+                        font-size: 1.2rem;
+                        font-family: roboto-condensed-font, sans-serif;
+                    }
+                    .trend-user span {
+                        font-size: 1rem;
+                        display: flex;
+                        justify-content: left;
+                        font-family: roboto-light-font, sans-serif;
+                        color: var(--gray-700-color);
+                        margin-top: 1vh;
+                    }
